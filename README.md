@@ -10,7 +10,7 @@ This project is meant to be copied into new project folders before design and bu
 - Vue 3 with the Composition API
 - Inertia 3
 - TypeScript
-- Tailwind 4 through the Vite plugin
+- Tailwind 4 via `@tailwindcss/vite`
 - shadcn-vue-style local UI components
 - Laravel Wayfinder
 - Laravel Form Requests for validation
@@ -50,8 +50,15 @@ These are not installed by default so the starter stays clean.
 From `/home/bootcamp/projects`:
 
 ```bash
-rsync -a --exclude=vendor --exclude=node_modules --exclude=.env _laravel-inertia-vue-starter/ new-example.com/
+rsync -a --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.env vilt-starter-kit/ new-example.com/
 cd new-example.com
+```
+
+If the starter was copied by another method and includes its Git history, reset the new project's repository timeline before the first commit:
+
+```bash
+rm -rf .git
+git init -b main
 ```
 
 Then edit these values:
@@ -398,6 +405,8 @@ Why `migrate --force --isolated`:
 - `--isolated` prevents multiple deploy workers from attempting migrations at the same time.
 
 Use `php artisan reload` when long-running services need the new code, such as queue workers, Reverb, Octane, or the Inertia SSR worker.
+
+When pairing PostgreSQL or pgvector workloads with Valkey-backed cache, queues, or sessions, monitor database and Valkey connection counts, worker concurrency, timeouts, and any pooler settings. High-concurrency deploys can fail from connection pressure before they fail from application code.
 
 For cPanel/shared hosting, build assets locally or in CI, upload `public/build`, run Composer on the server if available, and ensure `storage` and `bootstrap/cache` are writable.
 
