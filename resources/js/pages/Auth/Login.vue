@@ -37,7 +37,10 @@ function submit() {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <Alert v-if="form.errors.email" class="mb-5 border-red-200 bg-red-50 text-red-900">
+                <Alert
+                    v-if="form.errors.email"
+                    class="mb-5 border-red-200 bg-red-50 text-red-900"
+                >
                     {{ form.errors.email }}
                 </Alert>
 
@@ -63,7 +66,9 @@ function submit() {
                         />
                     </div>
 
-                    <label class="flex items-center gap-2 text-sm text-slate-700">
+                    <label
+                        class="flex items-center gap-2 text-sm text-slate-700"
+                    >
                         <input
                             v-model="form.remember"
                             type="checkbox"
@@ -72,7 +77,11 @@ function submit() {
                         Remember me
                     </label>
 
-                    <Button class="w-full" type="submit" :disabled="form.processing">
+                    <Button
+                        class="w-full"
+                        type="submit"
+                        :disabled="form.processing"
+                    >
                         Sign in
                     </Button>
                 </form>

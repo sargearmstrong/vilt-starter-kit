@@ -30,7 +30,7 @@ if (typeof window !== 'undefined') {
     });
 
     window.addEventListener('unhandledrejection', (event) => {
-        if (! isStaleAssetError(event.reason)) {
+        if (!isStaleAssetError(event.reason)) {
             return;
         }
 

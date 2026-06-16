@@ -46,9 +46,10 @@ const included = [
                     Build the custom site, keep the stack predictable.
                 </h1>
                 <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-                    This project is intentionally lean: a typed Inertia app shell,
-                    admin-ready permissions, Docker services, and enough structure
-                    for the next website without carrying project-specific content.
+                    This project is intentionally lean: a typed Inertia app
+                    shell, admin-ready permissions, Docker services, and enough
+                    structure for the next website without carrying
+                    project-specific content.
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-3">
@@ -105,8 +106,9 @@ const included = [
                     </CardTitle>
                 </CardHeader>
                 <CardContent class="text-sm leading-6 text-slate-600">
-                    Users, sessions, roles, permissions, and a protected admin route
-                    are ready for project-specific CMS or operational screens.
+                    Users, sessions, roles, permissions, and a protected admin
+                    route are ready for project-specific CMS or operational
+                    screens.
                 </CardContent>
             </Card>
 
@@ -118,9 +120,9 @@ const included = [
                     </CardTitle>
                 </CardHeader>
                 <CardContent class="text-sm leading-6 text-slate-600">
-                    MariaDB is the default database, PostgreSQL with pgvector is one
-                    profile away, and Valkey can be enabled per cache, queue, or
-                    session need.
+                    MariaDB is the default database, PostgreSQL with pgvector is
+                    one profile away, and Valkey can be enabled per cache,
+                    queue, or session need.
                 </CardContent>
             </Card>
         </section>

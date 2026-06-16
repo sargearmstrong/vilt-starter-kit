@@ -39,7 +39,9 @@ const page = usePage<SharedPageProps>();
                     </CardTitle>
                 </CardHeader>
                 <CardContent class="text-sm leading-6 text-slate-600">
-                    {{ page.props.auth.roles.join(', ') || 'No roles assigned' }}
+                    {{
+                        page.props.auth.roles.join(', ') || 'No roles assigned'
+                    }}
                 </CardContent>
             </Card>
 
