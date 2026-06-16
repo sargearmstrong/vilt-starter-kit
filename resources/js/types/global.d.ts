@@ -1,5 +1,5 @@
-import type { Auth } from '@/types/auth';
 import type { Flash, SharedApp } from '@/types';
+import type { Auth } from '@/types/auth';
 
 // Extend ImportMeta interface for Vite...
 declare module 'vite/client' {
